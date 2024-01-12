@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "./(shared)/NavBar";
 import Providers from "./Provider";
 import { Session } from "next-auth";
+import { SocketProvider } from "./socket-provider";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -23,8 +24,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} flex`}>
         <Providers session={session}>
-          <NavBar />
-          {children}
+          <SocketProvider>
+            <NavBar />
+            {children}
+          </SocketProvider>
         </Providers>
       </body>
     </html>

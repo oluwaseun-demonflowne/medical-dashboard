@@ -3,14 +3,14 @@ import { IoHelpCircleOutline } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import Image from "next/image";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
 import { shimmer, toBase64 } from "@/components/Shimmer";
 import About from "@/components/overview/About";
+import { auth } from "@/lib/auth";
 
 export default async function Home() {
-  const session = await getServerSession(authOptions);
+  const session = await auth()
   const user = session?.user;
+  
 
   return (
     <main className="w-[100%] bg-[#f9f9f9] pt-4 px-4 ">

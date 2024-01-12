@@ -1,9 +1,11 @@
-import type { NextAuthOptions } from "next-auth";
-import CredentialsProvider from "next-auth/providers/credentials";
-import GitHubProvider from "next-auth/providers/github";
+// import { NextAuthOptions } from "next-auth";
+import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
-export const authOptions: NextAuthOptions = {
+export const {
+  auth,
+  handlers: { GET, POST },
+} = NextAuth({
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
@@ -58,7 +60,7 @@ export const authOptions: NextAuthOptions = {
         user: {
           ...session.user,
           role: "Surgeon",
-          id: token.id,
+          id: token.id as string,
           randomKey: token.randomKey,
         },
       };
@@ -76,4 +78,4 @@ export const authOptions: NextAuthOptions = {
     },
   },
   secret: process.env.NEXTAUTH_SECRET,
-};
+});

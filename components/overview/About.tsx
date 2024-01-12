@@ -4,6 +4,8 @@ import { MdOutlinePerson4 } from "react-icons/md";
 import { IoBagAdd } from "react-icons/io5";
 import { CiVideoOn } from "react-icons/ci";
 import AppointmentRequest from "./snipperfolder/AppointmentRequest";
+import Patient from "./snipperfolder/Patient";
+import TodayAppointment from "./snipperfolder/TodayAppointment";
 
 type Props = {};
 
@@ -48,8 +50,10 @@ const About = (props: Props) => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="flex mt-8 gap-6 w-full">
         <AppointmentRequest />
+        <Patient />
+        <TodayAppointment />
       </div>
     </div>
   );

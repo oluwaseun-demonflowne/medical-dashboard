@@ -9,6 +9,7 @@ import { FaUserDoctor } from "react-icons/fa6";
 import { CiGrid41 } from "react-icons/ci";
 import Image from "next/image";
 import Logo from "../../public/medical logo.png";
+import Link from 'next/link'
 
 type Props = {};
 
@@ -27,10 +28,10 @@ const NavBar = (props: Props) => {
         <h1 className="text-sm font-black">Doct.</h1>
       </div>
       <ul className="flex flex-col">
-        <li className="cursor-pointer flex gap-2 py-3 rounded-sm hover:text-white hover:bg-black px-5 items-center text-sm">
+        <li><Link href="/" className="cursor-pointer flex gap-2 py-3 rounded-sm hover:text-white hover:bg-black px-5 items-center text-sm">
           <CiGrid41 className="text-base"/>  
           Overview
-        </li>
+        </Link></li>
         <li className="cursor-pointer flex gap-2 py-3 rounded-sm hover:text-white hover:bg-black px-5 items-center text-sm">
           <CiCalendar className="text-base" />
           Appointment
@@ -47,10 +48,11 @@ const NavBar = (props: Props) => {
           <CiCreditCard2 className="text-base" />
           Payments
         </li>
-        <li className="cursor-pointer flex gap-2 py-3 rounded-sm hover:text-white hover:bg-black px-5 items-center text-sm">
+        
+        <li><Link href="/messages" className="cursor-pointer flex gap-2 py-3 rounded-sm hover:text-white hover:bg-black px-5 items-center text-sm">
           <FaRegEnvelope className="text-base" />
           Message
-        </li>
+        </Link></li>
         <li className="cursor-pointer flex gap-2 py-3 rounded-sm hover:text-white hover:bg-black px-5 items-center text-sm">
           <FaRegFileAlt className="text-base" />
           Blog
