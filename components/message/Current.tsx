@@ -10,7 +10,7 @@ type Props = {};
 
 const Current = (props: Props) => {
   return (
-    <div className="pt-4 flex flex-col  bg-white border w-[100%]">
+    <div className="pt-4 h-[100%] flex flex-col  bg-white border w-[100%]">
       <div className="flex px-4 border-b  pb-2 justify-between items-center">
         <div className="flex gap-2">
           <Image

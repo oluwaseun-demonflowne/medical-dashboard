@@ -1,22 +1,22 @@
+import Link from "next/link"
 import { SVGProps } from "react"
 
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/udu4kxHK31t
- */
-export default function Component() {
+export default async function Component() {
     return (
       <div className="flex w-full flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
         <h1 className="text-4xl font-bold mb-6">Register</h1>
         <p className="text-gray-600 dark:text-gray-400 mb-10">Please select your registration type</p>
         <div className="flex sm:flex-col md:flex-row gap-6">
-          <button className="flex flex-col items-center justify-center p-6 bg-white shadow-md rounded-lg dark:bg-gray-800 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+          <button className="flex flex-col items-center justify-center p-6 bg-white hover:bg-gray-300 shadow-md rounded-lg dark:bg-gray-800 focus:ring-2 focus:outline-none"><Link className="flex flex-col items-center justify-center" href="/patient-register">
             <UserIcon className="h-16 w-16 mb-4 text-gray-500 dark:text-gray-400" />
-            <span className="text-lg font-medium">Register as a Patient</span>
+            <span className="text-lg font-medium">
+              
+              Register as a Patient 
+            </span></Link>
           </button>
-          <button className="flex flex-col items-center justify-center p-6 bg-white shadow-md rounded-lg dark:bg-gray-800 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+          <button className="flex hover:bg-gray-300 flex-col items-center justify-center p-6 bg-white shadow-md rounded-lg dark:bg-gray-800 focus:ring-2 focus:outline-none"><Link className="flex flex-col items-center justify-center" href="/doctor-register">
             <BriefcaseIcon className="h-16 w-16 mb-4 text-gray-500 dark:text-gray-400" />
-            <span className="text-lg font-medium">Register as a Doctor</span>
+            <span className="text-lg font-medium">Register as a Doctor</span></Link>
           </button>
         </div>
       </div>

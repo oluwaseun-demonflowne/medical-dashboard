@@ -6,7 +6,6 @@ const Page = async () => {
   return (
     <main className=" flex w-full bg-[#f9f9f9]">
       <List />
-      <Current />
     </main>
   );
 };

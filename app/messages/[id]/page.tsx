@@ -1,10 +1,13 @@
+import Current from '@/components/message/Current'
 import React from 'react'
 
 type Props = {}
 
-const Page = (props: Props) => {
+const Page = async (props: Props) => {
   return (
-    <div>page</div>
+    <section className='w-full '>
+      <Current />
+    </section>
   )
 }
 

@@ -57,9 +57,11 @@ const NavBar = (props: Props) => {
           <FaRegFileAlt className="text-base" />
           Blog
         </li>
-        <li className="cursor-pointer flex gap-2 py-3 rounded-sm hover:text-white hover:bg-black px-5 items-center text-sm">
+        <li>
+        <Link href="/settings" className="cursor-pointer flex gap-2 py-3 rounded-sm hover:text-white hover:bg-black px-5 items-center text-sm">
           <CiSettings className="text-base" />
           Settings
+          </Link>
         </li>
       </ul>
     </nav>

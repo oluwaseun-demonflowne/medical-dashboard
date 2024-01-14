@@ -14,7 +14,7 @@ const Footer = (props: Props) => {
   const [text, setText] = React.useState("");
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await socket.emit("sentMessage", {
+    await socket?.emit("sentMessage", {
       chatId: Math.floor(Math.random() * 100),
       message: text,
       senderEmail: session?.user?.email,

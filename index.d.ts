@@ -1,5 +1,6 @@
+import NextAuth, { DefaultSession } from "next-auth";
 export interface chatType {
-  chatId: number,  
+  chatId: number;
   message: string;
   senderEmail: string;
   receiverEmail: string;
@@ -8,5 +9,13 @@ export interface chatType {
 }
 
 interface Data {
-    data: chatType
+  data: chatType;
+}
+
+declare module "next-auth" {
+  interface Session {
+    user: {
+      role: string;
+    } & DefaultSession["user"];
+  }
 }

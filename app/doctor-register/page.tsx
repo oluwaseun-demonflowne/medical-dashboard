@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button"
 
 export default function Component() {
   return (
-    <main className="mx-auto pt-4 max-w-md space-y-6 mb-10">
+    <main className="mx-auto pt-8 mt-5 max-w-md space-y-6 mb-10">
       <div className="space-y-2 text-center">
         <h1 className="text-3xl font-bold">Doctor Registration</h1>
         <p className="text-gray-500 dark:text-gray-400">Fill in the details to create your account</p>

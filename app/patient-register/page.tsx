@@ -47,12 +47,8 @@ const Page = (props: Props) => {
               <Textarea id="address" placeholder="123 Main St, Anytown, USA" required />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="conditions">Pre-existing Conditions</Label>
+              <Label htmlFor="conditions">Main Diseases</Label>
               <Textarea id="conditions" placeholder="Enter any pre-existing conditions" />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="allergies">Allergies</Label>
-              <Textarea id="allergies" placeholder="Enter any allergies" />
             </div>
             <Button className="w-full" type="submit">
               Register
